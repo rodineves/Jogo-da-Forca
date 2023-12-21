@@ -444,22 +444,21 @@ int main(){
  
 					do{
 						if(erros == 6){
-								score = 0;
-								nivel = 0;
+							score = 0;
+							nivel = 0;
 						}
  
 						erros = 0;
 			 			number = fNumRamdom();
  
-				 			if(number == 0){
- 
-									printf("\nPalavras do nivel acabaram!\n");
-				                    op2=2;
-				                    printf("Aperte alguma coisa para continuar\n");
-				                    getch();
-				                    break;
- 
-			                 }
+			 			if(number == 0){
+								printf("\nPalavras do nivel acabaram!\n");
+			                    op2=2;
+			                    printf("Aperte alguma coisa para continuar\n");
+			                    getch();
+			                    break;
+
+		                 }
  
 						strcpy(palavraSecreta,fPegarPalavraFacil(number)); //palavra secreta é a palavra que pega no arquivo
 			    		palavraSecreta[strlen(palavraSecreta)-1] = '\0';
@@ -467,9 +466,9 @@ int main(){
  
 			    		for(i=0 ; i<strlen(palavraPraAcertar) ; i++){ //Se a a palavra tiver espaço, n troca o espaço pela "_".
  
-				  				if(palavraPraAcertar[i] != ' '){
-				  					palavraPraAcertar[i] = '_'; // Aqui tranforma a palavra em tracejado
-								}
+			  				if(palavraPraAcertar[i] != ' '){
+			  					palavraPraAcertar[i] = '_'; // Aqui tranforma a palavra em tracejado
+							}
 			  			}
  
 			  			nivel++;
@@ -484,7 +483,7 @@ int main(){
  
 				  			for(i=0 ; i<strlen(palavraPraAcertar) ; i++){
  
-						 			printf("%c ", palavraPraAcertar[i]); //imprime tracejado
+						 		printf("%c ", palavraPraAcertar[i]); //imprime tracejado
  
 							}
  
@@ -534,7 +533,6 @@ int main(){
 								printf("\tSua pontuacao ate agora foi: %d", score);
  
 								break;
- 
 							}
  
 							if(erros == 6){ //se errou 6 vezes
@@ -559,10 +557,10 @@ int main(){
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	 
  
 				case 2 :
-						do{
+					do{
 						if(erros == 6){
-								score = 0;
-								nivel = 0;
+							score = 0;
+							nivel = 0;
 						}
  
 						erros = 0;
@@ -584,9 +582,9 @@ int main(){
  
 			    		for(i=0 ; i<strlen(palavraPraAcertar) ; i++){ //Se a a palavra tiver espaço, n troca o espaço pela "_".
  
-				  				if(palavraPraAcertar[i] != ' '){
-				  						palavraPraAcertar[i] = '_';
-								}
+			  				if(palavraPraAcertar[i] != ' '){
+			  						palavraPraAcertar[i] = '_';
+							}
 			  			}
  
 			  			nivel++;
@@ -599,8 +597,7 @@ int main(){
 				  			printf("\t");
  
 				  			for(i=0 ; i<strlen(palavraPraAcertar) ; i++){
- 
-						 			printf("%c ", palavraPraAcertar[i]);
+						 		printf("%c ", palavraPraAcertar[i]);
  
 							}
  
@@ -650,7 +647,6 @@ int main(){
 								printf("\tSua pontuacao ate agora foi: %d", score);
  
 								break;
- 
 							}
  
 							if(erros == 6){
@@ -676,10 +672,10 @@ int main(){
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////				
  
 				case 3 :
-						do{
+					do{
 						if(erros == 6){
-								score = 0;
-								nivel = 0;
+							score = 0;
+							nivel = 0;
 						}
  
 						erros = 0;
@@ -687,41 +683,41 @@ int main(){
  
 			 			if(number == 0){
  
-								printf("\nPalavras do nivel acabaram!\n");
-			                    op2=2;
-			                    printf("Aperte alguma coisa para continuar\n");
-			                    getch();
-			                    break;
+							printf("\nPalavras do nivel acabaram!\n");
+		                    op2=2;
+		                    printf("Aperte alguma coisa para continuar\n");
+		                    getch();
+		                    break;
  
 		                 }
  
-						strcpy(palavraSecreta,fPegarPalavraDificil(number)); //lembrar que talvez isso mude
+						strcpy(palavraSecreta,fPegarPalavraDificil(number));
 			    		palavraSecreta[strlen(palavraSecreta)-1] = '\0';
 			    		strcpy(palavraPraAcertar, palavraSecreta);
  
 			    		for(i=0 ; i<strlen(palavraPraAcertar) ; i++){ //Se a a palavra tiver espaço, n troca o espaço pela "_".
  
-				  				if(palavraPraAcertar[i] != ' '){
-				  						palavraPraAcertar[i] = '_';
-								}
+			  				if(palavraPraAcertar[i] != ' '){
+			  					palavraPraAcertar[i] = '_';
+							}
 			  			}
  
 			  			nivel++;
 			  			while(1){
  
 			  				fLimpa_tela();
-			  				printf("\n\n\tNivel %d - Dificil                   Score: %d\n", nivel, score); //aqui muda
+			  				printf("\n\n\tNivel %d - Dificil                   Score: %d\n", nivel, score);
 				  			fForca(erros);
  
 				  			printf("\t");
  
 				  			for(i=0 ; i<strlen(palavraPraAcertar) ; i++){
  
-						 			printf("%c ", palavraPraAcertar[i]);
+						 		printf("%c ", palavraPraAcertar[i]);
  
 							}
  
-							printf("\tDica: %s\n", fPegarDicaDificil(number)); //Lembrar que talvez pode mudar
+							printf("\tDica: %s\n", fPegarDicaDificil(number));
 							fflush(stdin);
  
 							printf("\n");
@@ -741,9 +737,7 @@ int main(){
 				 					Sleep(710);
 									chute = 1;
 									score += 5;
- 
 								}
- 
 							}
  
 							if(chute == 0){
@@ -796,7 +790,6 @@ int main(){
 		} while(op != 1 && op != 2 && op != 3);
  
 	} while(seQuerParar == 0);
- 
  
 	return 0;
 }
