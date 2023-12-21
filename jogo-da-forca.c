@@ -17,6 +17,7 @@
 Faltou corrigir um erro: evitar que o jogador digite a mesma letra, falta de tempo mesmo.
 
 */
+
 int vetAux[QDP];
 int k;
  
